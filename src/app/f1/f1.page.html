@@ -9,7 +9,21 @@
 
 
 <ion-content>
+  <h1 style="color:red">All The Live F1 News</h1>
 <img length="700" width="400" src="https://cdn.crash.net/styles/medium_article/s3/field/image/SI202205082697_hires_jpeg_24bit_rgb.jpg?itok=Zh2T9MH_">
+
+<!--Title before the Api-->
+<h2 style="color:green">Live News</h2>
+
+<ion-card *ngFor="let f1News of F1Data ">
+  <img length="700" width="400" src="{{f1News.image_url}}">
+  <ion-card-header>
+    <ion-card-subtitle>{{f1News.pubDate}}</ion-card-subtitle>
+    <ion-card-title>{{f1News.title}}</ion-card-title>
+    <ion-card-subtitle>{{f1News.description}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+
 <!-- Embedding f1 Players-->
 <app-f1players></app-f1players>
 </ion-content>

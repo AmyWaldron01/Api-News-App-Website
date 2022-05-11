@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UkraineService } from '../Services/ukraine.service';
 
 @Component({
   selector: 'app-switch-sports',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SwitchSportsPage implements OnInit {
 
-  constructor() { }
+  //varible
+  WiiData:any =[];
+  
+  constructor(private wiiNews:UkraineService) { }
 
+  //making it so i can get wii data
   ngOnInit() {
+    this.wiiNews.GetWiiData().subscribe(
+      (data)=>{
+        this.WiiData=data.results;
+        console.log(this.WiiData);
+      }
+    );
   }
 
 }

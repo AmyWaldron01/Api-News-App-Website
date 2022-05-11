@@ -9,21 +9,38 @@
 
 
 <ion-content>
+  <h1 style="color:red;">Ukraine War Crisis</h1>
 <img length="700" width="400" src="https://th-thumbnailer.cdn-si-edu.com/eIVzDmJT9cLARe5JbIMPT5bMqGQ=/fit-in/1600x0/filters:focal(1200x800:1201x801)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/72/e8/72e8c06f-ab83-4f8b-b9ec-b5013f72313c/julaug2022_b05_ukraineartwork.jpg">
 
+<!--Title before the Api-->
+<h2 style="color:green">Live News</h2>
+
 <!--Diaplying the array-->
-<ion-list>
-  <ion-item *ngFor=" let ukraineNews of UkraineData ">
-    <ion-item-group>
-      <img src="{{ukraineNews.link}}">
-      <!-- <ion-item-divider>
-        <ion-label>{{ukraineNews.title}}</ion-label>
-      </ion-item-divider>
-        <ion-label>
-          {{ukraineNews.creator}}
-        </ion-label> -->
-    </ion-item-group>
-  </ion-item>
-</ion-list>
+<!-- <ion-list>
+<div *ngFor="let ukraineNews of UkraineData">
+  <ion-item>
+        <ion-item-group>
+          
+          <img length="700" width="400" src="{{ukraineNews.image_url}}">    
+          <ion-label>{{ukraineNews.title}}</ion-label>
+          <ion-label class="ion-text-wrap">{{ukraineNews.content}}</ion-label>
+       
+          <ion-label>
+            {{ukraineNews.pubDate}}
+          </ion-label>
+          </ion-item-group>
+    </ion-item>
+</div>
+</ion-list> -->
+
+<ion-card *ngFor="let ukraineNews of UkraineData">
+  <img length="700" width="400" src="{{ukraineNews.image_url}}">
+  <ion-card-header>
+    <ion-card-subtitle>{{ukraineNews.pubDate}}</ion-card-subtitle>
+    <ion-card-title>{{ukraineNews.title}}</ion-card-title>
+    <ion-card-subtitle>{{ukraineNews.content}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card> 
+
 
 </ion-content>

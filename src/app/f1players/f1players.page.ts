@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UkraineService } from '../Services/ukraine.service';
 
 @Component({
   selector: 'app-f1players',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class F1playersPage implements OnInit {
 
-  constructor() { }
+  
+  constructor( ) { }
 
   ngOnInit() {
+
   }
 
 }

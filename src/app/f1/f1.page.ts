@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UkraineService } from '../Services/ukraine.service';
 
 @Component({
   selector: 'app-f1',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class F1Page implements OnInit {
 
-  constructor() { }
+  //varibles
+  F1Data:any=[];
+
+  constructor(private f1News:UkraineService) { }
 
   ngOnInit() {
+    this.f1News.GetF1Data().subscribe(
+      (data)=>{
+        this.F1Data=data.results;
+        console.log(this.F1Data);
+      }
+    )
   }
 
 }

@@ -17,7 +17,7 @@ export class UkrainePage implements OnInit {
   ngOnInit() {
     this.ukraineNews.GetUkrineData().subscribe(
       (data)=>{
-        this.UkraineData=data.Search;
+        this.UkraineData=data.results;
         console.log(this.UkraineData);
       }
     );

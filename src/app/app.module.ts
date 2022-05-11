@@ -10,10 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 //For Servies 
 import {HttpClientModule} from '@angular/common/http'
 
+//For Saving Data -Storage
+import {IonicStorageModule} from '@ionic/storage-angular';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicStorageModule.forRoot(), IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

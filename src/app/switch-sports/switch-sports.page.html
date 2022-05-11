@@ -7,7 +7,20 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
-<img length="700" width="400" src="https://cdn.givemesport.com/wp-content/uploads/2022/02/Nintendo-Switch-Sports-1-1200x1200-c-default.jpg">
+  <h1 style = "color:red"> Wii News</h1>
+<img length="700" width="400" src="https://twistedvoxel.com/wp-content/uploads/2022/05/switch-sports.jpeg">
+
+<!--Title before the Api-->
+<h2 style="color:green">Live News</h2>
+
+<ion-card *ngFor="let wiiNews of WiiData ">
+  <img length="700" width="400" src="{{wiiNews.image_url}}">
+  <ion-card-header>
+    <ion-card-subtitle>{{wiiNews.pubDate}}</ion-card-subtitle>
+    <ion-card-title>{{wiiNews.title}}</ion-card-title>
+    <ion-card-subtitle>{{wiiNews.description}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+
 </ion-content>

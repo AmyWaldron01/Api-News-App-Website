@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'best-tech',
     loadChildren: () => import('./best-tech/best-tech.module').then( m => m.BestTechPageModule)
   },
+  {
+    path: 'status',
+    loadChildren: () => import('./status/status.module').then( m => m.StatusPageModule)
+  },
 ];
 
 @NgModule({

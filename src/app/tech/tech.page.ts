@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //This is for using the method for best iphones
 import {NavController} from '@ionic/angular';
+import { UkraineService } from '../Services/ukraine.service';
 
 @Component({
   selector: 'app-tech',
@@ -9,9 +10,19 @@ import {NavController} from '@ionic/angular';
 })
 export class TechPage implements OnInit {
 
-  constructor(private navCtrl:NavController) { }
+  //varible
+  TechData:any=[];
+
+  constructor(private navCtrl:NavController, private techNews:UkraineService) { }
 
   ngOnInit() {
+    this.techNews.GetTechData().subscribe(
+      (data)=>{
+        this.TechData=data.results;
+        console.log(this.TechData);
+      }
+    )
+  
   }
 
   //The method used to open best iphones
