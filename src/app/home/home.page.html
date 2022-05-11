@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Up To Date News Page
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,31 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Goes to the Ukraine News -->
+  <img length="700" width="400" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/1601E/production/_109224109_ukraine.png"/> 
+  <br>
+  <ion-button [routerLink]="['/ukraine']">Go to Urkaine News</ion-button>
+  <br>
+  <br>
+
+  <!-- Goes to the Switch Sport News -->
+  <img length="700" width="400" src="https://images.nintendolife.com/7fd7e158b00a8/1280x720.jpg"/> 
+  <br>
+  <ion-button [routerLink]="['/switch-sports']">Go to Nintendo Switch News</ion-button>
+  <br>
+  <br>
+
+  <!-- Goes to the F1 News -->
+  <img length="700" width="400" src="https://cdn.crash.net/styles/medium_article/s3/field/image/SI202205082697_hires_jpeg_24bit_rgb.jpg?itok=Zh2T9MH_"/> 
+  <br>
+  <ion-button [routerLink]="['/f1']">Go to F1 News</ion-button>
+  <br>
+  <br>
+
+  <!-- Goes to the Tech News -->
+  <img length="700" width="400" src="https://www.ripplesnigeria.com/wp-content/uploads/2020/03/Latest-tech-news3.jpg"/> 
+  <br>
+  <ion-button [routerLink]="['/tech']">Go to Tech News</ion-button>
+  <br>
+  
 </ion-content>

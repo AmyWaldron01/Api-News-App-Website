@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-undo" text="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>The Best Iphones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!--An unordered list of the best iphones-->
+<ul>
+  <li *ngFor="let best of iphones">{{best}}</li>
+</ul>
+</ion-content>

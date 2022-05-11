@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-undo" text="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ukraine News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<img length="700" width="400" src="https://th-thumbnailer.cdn-si-edu.com/eIVzDmJT9cLARe5JbIMPT5bMqGQ=/fit-in/1600x0/filters:focal(1200x800:1201x801)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/72/e8/72e8c06f-ab83-4f8b-b9ec-b5013f72313c/julaug2022_b05_ukraineartwork.jpg">
+
+<!--Diaplying the array-->
+<ion-list>
+  <ion-item *ngFor=" let ukraineNews of UkraineData ">
+    <ion-item-group>
+      <img src="{{ukraineNews.link}}">
+      <!-- <ion-item-divider>
+        <ion-label>{{ukraineNews.title}}</ion-label>
+      </ion-item-divider>
+        <ion-label>
+          {{ukraineNews.creator}}
+        </ion-label> -->
+    </ion-item-group>
+  </ion-item>
+</ion-list>
+
+</ion-content>
